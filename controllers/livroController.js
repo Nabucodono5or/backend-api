@@ -5,6 +5,7 @@ const createLivro = (doc) => {
   const livro = new Livro(
     doc.id,
     doc.data().titulo,
+    doc.data().autor,
     doc.data().editora,
     parseInt(doc.data().paginas),
     parseFloat(doc.data().preco),
@@ -77,9 +78,21 @@ const updateLivro = async (req, res, next) => {
 
 }
 
+const deleteLivro = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    await db.collection("livros").doc(id).delete();
+    res.send("Dado deletado com sucesso!");
+  
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
 module.exports = {
   addLivro,
   getAllLivros,
   getLivro,
   updateLivro,
+  deleteLivro,
 };
