@@ -63,8 +63,23 @@ const getLivro = async (req, res, next) => {
   }
 };
 
+const updateLivro = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const dados = req.body;
+    const livro = db.collection("livros").doc(id);
+    await livro.update(dados);
+    res.send("Atualizado com sucesso!");
+  
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+
+}
+
 module.exports = {
   addLivro,
   getAllLivros,
   getLivro,
+  updateLivro,
 };
