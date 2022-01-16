@@ -10,9 +10,11 @@ const {
   MESSAGING_SENDER_ID,
   APP_ID,
   MEASUREMENT_ID,
+  GOOGLE_APPLICATION_CREDENTIALS,
 } = process.env;
 
 module.exports = {
+  serviceAccount:GOOGLE_APPLICATION_CREDENTIALS,
   firebaseConfig: {
     apiKey: API_KEY,
     authDomain: AUTH_DOMAIN,
