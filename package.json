@@ -1,0 +1,24 @@
+{
+  "name": "backend-api",
+  "version": "1.0.0",
+  "description": "Projeto backend para processo seletivo alest",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nabucodono5or/backend-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "API"
+  ],
+  "author": "Jefferson Abreu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nabucodono5or/backend-api/issues"
+  },
+  "homepage": "https://github.com/Nabucodono5or/backend-api#readme"
+}
