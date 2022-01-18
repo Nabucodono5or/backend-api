@@ -10,4 +10,4 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", livroRoutes.routes);
 
-app.listen(3000, () => console.log("Servidor iniciado!"));
+app.listen(5000, () => console.log("Servidor iniciado!"));
